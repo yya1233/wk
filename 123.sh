@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# 获取脚本的绝对路径
+script_path=$(realpath "$0")
+
 # 复制脚本到临时文件夹
 script_name="123.sh"
-cp "$0" "/tmp/$script_name"
+cp "$script_path" "/tmp/$script_name"
 
 # 添加执行权限
 chmod +x "/tmp/$script_name"
